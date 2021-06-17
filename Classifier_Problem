@@ -7,12 +7,12 @@ import pandas as pd
 data_set= pd.read_csv('phone.csv')  
   
 #Extracting Independent and dependent Variable  
-x= data_set.iloc[:, [1,2]].values  
-y= data_set.iloc[:, 3].values  
+x= data_set.iloc[:,[1,2]].values  
+y= data_set.iloc[:,3].values  
   
 # Splitting the dataset into training and test set.  
 from sklearn.model_selection import train_test_split  
-x_train, x_test, y_train, y_test= train_test_split(x, y, test_size= 0.25, random_state=0)  
+x_train, x_test, y_train, y_test= train_test_split(x, y, test_size= 0.20, random_state=0)  
   
 #feature Scaling  
 from sklearn.preprocessing import StandardScaler    
